@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>etchit — etch it. fetch it.</title>
-<meta name="description" content="Permanent, censorship-resistant pastes on the Autonomi Network. No servers. No accounts. No delete button.">
-<link rel="icon" type="image/svg+xml" href="etchit-favicon.svg">
+<meta name="description" content="Permanent, censorship-resistant pastes on the Autonomi Network. No central operator. No accounts. No delete button.">
+<link rel="icon" type="image/png" href="etchit-favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -369,12 +369,14 @@
   .out .addr {
     color: var(--bone);
     background: var(--ink-3);
-    padding: 2px 8px;
+    padding: 4px 10px;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
     margin-top: 4px;
     border: 1px solid var(--line);
+    word-break: break-all;
+    max-width: 100%;
   }
   .terminal-line { display: block; opacity: 0; animation: typeIn 0.4s forwards; }
   .terminal-line:nth-child(1) { animation-delay: 0.0s; }
@@ -785,7 +787,7 @@
   <div class="hero-inner">
     <div class="hero-meta">
       <span class="dot"></span>
-      <span>Built on the Autonomi Network</span>
+      <span>Built on Autonomi · Android app beta · CLI and iOS soon</span>
     </div>
 
     <h1 class="hero-headline">
@@ -818,15 +820,15 @@
     <span>PERMANENT BY DEFAULT</span><span class="sep">[/]</span>
     <span>NO ACCOUNTS</span><span class="sep">[/]</span>
     <span>NO MODERATORS</span><span class="sep">[/]</span>
-    <span>NO SERVERS</span><span class="sep">[/]</span>
+    <span>NO CENTRAL OPERATOR</span><span class="sep">[/]</span>
     <span>OPEN PROTOCOL</span><span class="sep">[/]</span>
-    <span>PAID IN ANT</span><span class="sep">[/]</span>
+    <span>READ FREE · PAY TO WRITE</span><span class="sep">[/]</span>
     <span>PERMANENT BY DEFAULT</span><span class="sep">[/]</span>
     <span>NO ACCOUNTS</span><span class="sep">[/]</span>
     <span>NO MODERATORS</span><span class="sep">[/]</span>
-    <span>NO SERVERS</span><span class="sep">[/]</span>
+    <span>NO CENTRAL OPERATOR</span><span class="sep">[/]</span>
     <span>OPEN PROTOCOL</span><span class="sep">[/]</span>
-    <span>PAID IN ANT</span><span class="sep">[/]</span>
+    <span>READ FREE · PAY TO WRITE</span><span class="sep">[/]</span>
   </div>
 </div>
 
@@ -852,11 +854,11 @@
     </div>
     <div class="terminal-body">
       <span class="terminal-line"><span class="prompt">$</span> <span class="cmd">etch "meeting notes · q3 strategy"</span></span>
-      <span class="terminal-line out">→ writing to autonomi network...</span>
-      <span class="terminal-line out">→ payment: <span class="ok">0.0001 ANT</span></span>
+      <span class="terminal-line out">→ encrypting · chunking · quoting close group...</span>
+      <span class="terminal-line out">→ payment: <span class="ok">quoted on network · paid in ANT</span></span>
       <span class="terminal-line out"><span class="ok">✓ etched.</span> permanent address:</span>
-      <span class="terminal-line out"><span class="addr">etchit.io/0xa7f3c9d21e...</span></span>
-      <span class="terminal-line out" style="margin-top: 8px;">share the link. it will be there. forever.</span>
+      <span class="terminal-line out"><span class="addr">bebb4f16bc23aa4581bff5fec471829959c1edbe4485eb4cf0d853a62f5406f0</span></span>
+      <span class="terminal-line out" style="margin-top: 8px;">share the address. it will be there. forever.</span>
     </div>
   </div>
 </section>
@@ -983,7 +985,7 @@
     <div class="spec">
       <div class="spec-num">04</div>
       <div class="spec-big">PQC</div>
-      <div class="spec-label">Post-quantum cryptography. Built on Autonomi 2.0's updated cryptographic architecture.</div>
+      <div class="spec-label">Post-quantum cryptography throughout. ML-DSA-65 + ML-KEM-768 for identity and key exchange; ChaCha20-Poly1305 + BLAKE3 for content.</div>
     </div>
     <div class="spec">
       <div class="spec-num">05</div>
