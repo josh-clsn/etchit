@@ -711,25 +711,50 @@
   .cta-status .ok { color: var(--signal-ok); }
   .cta-status strong { color: var(--bone); font-weight: 500; }
 
+  .cta-actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .dl-btn,
   .star-btn {
     display: inline-flex;
     align-items: center;
     gap: 14px;
     padding: 22px 36px;
-    background: var(--copper);
-    color: var(--ink);
     font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.02em;
-    border: 1px solid var(--copper);
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     text-decoration: none;
     position: relative;
+    border: 1px solid var(--copper);
   }
-  .star-btn:hover {
+  .dl-btn {
+    background: var(--copper);
+    color: var(--ink);
+  }
+  .dl-btn:hover {
     background: var(--copper-bright);
     border-color: var(--copper-bright);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--ink-3), 4px 4px 0 1px var(--copper-dim);
+  }
+  .dl-icon {
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .dl-btn:hover .dl-icon { transform: translateY(3px); }
+  .star-btn {
+    background: transparent;
+    color: var(--copper);
+  }
+  .star-btn:hover {
+    background: var(--copper);
+    color: var(--ink);
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0 var(--ink-3), 4px 4px 0 1px var(--copper-dim);
   }
@@ -1171,13 +1196,20 @@
     </h2>
     <p class="cta-sub">
       etchit is open source and in active development. No waitlist, no
-      email capture. Star the repo to follow along.
+      email capture. Download for Android, or star the repo to follow along.
     </p>
-    <a href="https://github.com/etchit-io/etchit" target="_blank" class="star-btn">
-      <span class="star-icon">★</span>
-      <span class="star-text">Star on GitHub</span>
-      <span class="star-arrow">↗</span>
-    </a>
+    <div class="cta-actions">
+      <a href="https://github.com/etchit-io/etchit/releases/latest/download/app-release.apk"
+         class="dl-btn">
+        <span class="dl-icon">↓</span>
+        <span class="dl-text">Download for Android</span>
+      </a>
+      <a href="https://github.com/etchit-io/etchit" target="_blank" class="star-btn">
+        <span class="star-icon">★</span>
+        <span class="star-text">Star on GitHub</span>
+        <span class="star-arrow">↗</span>
+      </a>
+    </div>
     <div class="cta-status">
       <strong>Status:</strong> Android first.
       <span class="ok">✓</span> Text etches ·
