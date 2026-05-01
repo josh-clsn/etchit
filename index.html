@@ -87,6 +87,19 @@
   }
   .nav-links a { transition: color 0.2s; }
   .nav-links a:hover { color: var(--copper); }
+  .nav-links .nav-lib {
+    color: var(--copper);
+    font-weight: 600;
+    padding: 4px 10px;
+    border: 1px solid var(--copper-dim);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .nav-links .nav-lib:hover {
+    color: var(--ink);
+    background: var(--copper);
+    border-color: var(--copper);
+  }
   @media (max-width: 640px) { .nav-links { display: none; } }
 
   /* ======================== HERO ======================== */
@@ -870,6 +883,7 @@
     <span>etchit</span>
   </a>
   <div class="nav-links">
+    <a href="library.html" class="nav-lib">library</a>
     <a href="#ideas">Ideas</a>
     <a href="#how">How</a>
     <a href="#specs">Specs</a>
